@@ -11,7 +11,9 @@
 		2360F5351EF09F210032392B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360F5341EF09F210032392B /* ViewController.swift */; };
 		2360F5381EF09F210032392B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2360F5361EF09F210032392B /* Main.storyboard */; };
 		2360F53A1EF09F210032392B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2360F5391EF09F210032392B /* Assets.xcassets */; };
-		2360F53D1EF09F210032392B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2360F53B1EF09F210032392B /* LaunchScreen.storyboard */; };
+		2360F54B1EF09FAF0032392B /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2360F54A1EF09FAF0032392B /* ResultView.xib */; };
+		2360F54D1EF09FC20032392B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360F54C1EF09FC20032392B /* ResultView.swift */; };
+		2360F54F1EF0A01D0032392B /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2360F54E1EF0A01D0032392B /* GoogLeNetPlaces.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +22,10 @@
 		2360F5341EF09F210032392B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2360F5371EF09F210032392B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2360F5391EF09F210032392B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2360F53C1EF09F210032392B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2360F53E1EF09F210032392B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2360F54A1EF09FAF0032392B /* ResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		2360F54C1EF09FC20032392B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		2360F54E1EF0A01D0032392B /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = "../../NotHotDog-CoreML-Tutorial/NotHotDog-CoreML-Tutorial/GoogLeNetPlaces.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 			children = (
 				2360F5321EF09F210032392B /* AppDelegate.swift */,
 				2360F5341EF09F210032392B /* ViewController.swift */,
+				2360F54A1EF09FAF0032392B /* ResultView.xib */,
+				2360F54C1EF09FC20032392B /* ResultView.swift */,
+				2360F54E1EF0A01D0032392B /* GoogLeNetPlaces.mlmodel */,
 				2360F5361EF09F210032392B /* Main.storyboard */,
 				2360F5391EF09F210032392B /* Assets.xcassets */,
-				2360F53B1EF09F210032392B /* LaunchScreen.storyboard */,
 				2360F53E1EF09F210032392B /* Info.plist */,
 			);
 			path = CameraClassifier;
@@ -122,7 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2360F53D1EF09F210032392B /* LaunchScreen.storyboard in Resources */,
+				2360F54B1EF09FAF0032392B /* ResultView.xib in Resources */,
 				2360F53A1EF09F210032392B /* Assets.xcassets in Resources */,
 				2360F5381EF09F210032392B /* Main.storyboard in Resources */,
 			);
@@ -137,6 +143,8 @@
 			files = (
 				2360F5351EF09F210032392B /* ViewController.swift in Sources */,
 				2360F5331EF09F210032392B /* AppDelegate.swift in Sources */,
+				2360F54D1EF09FC20032392B /* ResultView.swift in Sources */,
+				2360F54F1EF0A01D0032392B /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +157,6 @@
 				2360F5371EF09F210032392B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2360F53B1EF09F210032392B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2360F53C1EF09F210032392B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -274,7 +274,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jake.CameraClassifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -288,7 +288,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jake.CameraClassifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
